@@ -4,6 +4,7 @@ import cdk = require('@aws-cdk/core');
 import { IWorkshopStackProps } from '../lib/iWorkshopStackProps';
 
 import { HelloWorldStack } from '../lib/stacks/helloWorldStack'
+import { EchoStack } from '../lib/stacks/echoStack'
 
 const stackProps:IWorkshopStackProps = {
   env: {
@@ -21,4 +22,5 @@ const prefix = 'workshop1026';
 const app = new cdk.App();
 
 new HelloWorldStack(app, `${prefix}HelloWorld`, stackProps);
+new EchoStack(app, `${prefix}Echo`, stackProps);
 
