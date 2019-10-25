@@ -7,6 +7,7 @@ import { HelloWorldStack } from '../lib/stacks/helloWorldStack'
 import { EchoStack } from '../lib/stacks/echoStack'
 import { RainFallCrawlerStack } from '../lib/stacks/rainFallCrawlerStack';
 import { HelloDockerStack } from "../lib/stacks/helloDockerStack";
+import { RainFallStack } from "../lib/stacks/rainFallStack";
 
 const stackProps:IWorkshopStackProps = {
   env: {
@@ -27,4 +28,6 @@ new HelloWorldStack(app, `${prefix}HelloWorld`, stackProps);
 new EchoStack(app, `${prefix}Echo`, stackProps);
 new RainFallCrawlerStack(app, `${prefix}RainFallCrawler`, stackProps);
 new HelloDockerStack(app, `${prefix}HelloDocker`, stackProps);
+
+new RainFallStack(app, `${prefix}RainFall`, stackProps);
 
