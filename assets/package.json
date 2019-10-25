@@ -1,0 +1,12 @@
+{
+  "description": "",
+  "dependencies": {
+    "aws-sdk": "^2.552.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
