@@ -8,6 +8,7 @@ import { EchoStack } from '../lib/stacks/echoStack'
 import { RainFallCrawlerStack } from '../lib/stacks/rainFallCrawlerStack';
 import { HelloDockerStack } from "../lib/stacks/helloDockerStack";
 import { RainFallStack } from "../lib/stacks/rainFallStack";
+import { WeatherMonitorStack } from "../lib/stacks/weatherMonitorStack";
 
 const stackProps:IWorkshopStackProps = {
   env: {
@@ -28,6 +29,13 @@ new HelloWorldStack(app, `${prefix}HelloWorld`, stackProps);
 new EchoStack(app, `${prefix}Echo`, stackProps);
 new RainFallCrawlerStack(app, `${prefix}RainFallCrawler`, stackProps);
 new HelloDockerStack(app, `${prefix}HelloDocker`, stackProps);
-
 new RainFallStack(app, `${prefix}RainFall`, stackProps);
+new WeatherMonitorStack(app, `${prefix}RainFall`, stackProps);
 
+// @FUN
+// 將 twoApps 改爲 true，現在我們有兩個 APP 了！！
+const twoApps:boolean = false;
+if (twoApps) {
+  const app2 = new cdk.App();
+  new HelloWorldStack(app2, `${prefix}HelloWorld2`, stackProps);
+}
