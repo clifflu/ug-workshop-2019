@@ -3,6 +3,8 @@ import 'source-map-support/register';
 import cdk = require('@aws-cdk/core');
 import { IWorkshopStackProps } from '../lib/iWorkshopStackProps';
 
+import { HelloWorldStack } from '../lib/stacks/helloWorldStack'
+
 const stackProps:IWorkshopStackProps = {
   env: {
     account: process.env.CDK_DEFAULT_ACCOUNT,
@@ -17,4 +19,6 @@ const stackProps:IWorkshopStackProps = {
 
 const prefix = 'workshop1026';
 const app = new cdk.App();
+
+new HelloWorldStack(app, `${prefix}HelloWorld`, stackProps);
 
