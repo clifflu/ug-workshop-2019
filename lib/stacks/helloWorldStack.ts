@@ -23,9 +23,9 @@ export class HelloWorldStack extends cdk.Stack {
 
     table.grantReadWriteData(role);
 
-    // Vpc
-    const vpcDefault = ec2.Vpc.fromLookup(this, 'Vpc', {
-      vpcName: 'default'
-    })
+    // 利用 Lookup 取出已經存在的 Vpc；資料會快取在 cdk.context.json 中
+    // const vpcDefault = ec2.Vpc.fromLookup(this, 'Vpc', {
+    //   vpcName: 'default'
+    // })
   }
 }
