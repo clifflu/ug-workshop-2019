@@ -1,7 +1,7 @@
 {
   "description": "",
   "dependencies": {
-    "aws-sdk": "^2.552.0",
+    "aws-sdk": "^2.556.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
