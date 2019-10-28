@@ -3,6 +3,8 @@
 AWS User Group Taiwan 在 AWS & Twitch Hack‘n'Roll Workshop 的訓練教程專案。
 演示利用 AWS CDK 開發 Lambda 與 Fargate 應用程式，並利用其他 AWS 服務解決問題。
 
+註：爲避免不必要的 rebase，文檔更新只推送到 master branch
+
 ## Prerequisites
 
 * [git](https://git-scm.com/)
@@ -17,6 +19,8 @@ AWS User Group Taiwan 在 AWS & Twitch Hack‘n'Roll Workshop 的訓練教程專
 ## Usage
 
 先在專案目錄下執行 `npm run installll` 以安裝專案與 asset 的套件。
+
+註：現建議將 AWS SDK 明確加入 asset dependency 中，避免 Lambda 執行環境自帶的版本過舊。
 
 ## Useful commands
 
